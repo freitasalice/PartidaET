@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "disp7seg.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "disp7seg.c" 2
 
 
 
@@ -2499,7 +2499,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
+# 9 "disp7seg.c" 2
 
 # 1 "./config.h" 1
 
@@ -2520,109 +2520,20 @@ extern __bank0 __bit __timeout;
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 10 "main.c" 2
-
-# 1 "./delay.h" 1
+# 10 "disp7seg.c" 2
 
 
-
-void delay ( int t);
-# 11 "main.c" 2
-
-# 1 "./contatores.h" 1
+char vetor[16] = { 0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
 
 
-
-void contatores_init (void);
-void k1 (int liga_desliga);
-void k2 (int liga_desliga);
-void k3 (int liga_desliga);
-# 12 "main.c" 2
-
-# 1 "./botoes.h" 1
-
-
-
-void botoes_init (void);
-int s1(void);
-int s0(void);
-# 13 "main.c" 2
-
-# 1 "./botoes7seg.h" 1
-# 14 "main.c" 2
-
-# 1 "./disp7seg.h" 1
-
-
-
-void disp7seg_init (void);
-void display7seg (char c);
-
-struct display7seg_T
+void disp7seg_init (void)
 {
-    void (*init) (void);
-    void (*print) (char c);
-} d7seg = { disp7seg_init, display7seg };
-# 15 "main.c" 2
+    ANSELH = 0;
+    TRISB = 0x00;
+    PORTB = 0x00;
+}
 
-
-
-
-void main(void)
+void display7seg (char c)
 {
-    d7seg.init();
-    signed char cont = 0;
-    int estado = 0;
-    int t;
-    while (1)
-    {
-        switch( estado)
-        {
-            case 0:
-
-                estado = 1;
-                break;
-
-            case 1:
-                contatores_init ();
-                botoes_init ();
-                estado = 2;
-                break;
-
-            case 2:
-                if (s1 () == 1)
-                estado = 3;
-                break;
-
-            case 3:
-                k1(1);
-                k2(1);
-                t = 3000;
-                estado = 4;
-                break;
-
-            case 4:
-                delay (1);
-                --t;
-                if ( t <= 0)
-                    estado = 5;
-                break;
-
-            case 5:
-                k2(0);
-                k3(1);
-                 ++cont;
-                if(cont >= 15)
-                    cont = 0;
-                estado = 1;
-                break;
-                ;
-            case 6:
-                if (s0 () ==1)
-                    estado = 1;
-
-        }
-
-        d7seg.print(cont);
-    }
+    PORTB = vetor[c];
 }

@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "botoes7seg.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "botoes7seg.c" 2
 
 
 
@@ -2499,130 +2499,25 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 9 "main.c" 2
-
-# 1 "./config.h" 1
+# 9 "botoes7seg.c" 2
 
 
 
 
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-# 10 "main.c" 2
-
-# 1 "./delay.h" 1
-
-
-
-void delay ( int t);
-# 11 "main.c" 2
-
-# 1 "./contatores.h" 1
-
-
-
-void contatores_init (void);
-void k1 (int liga_desliga);
-void k2 (int liga_desliga);
-void k3 (int liga_desliga);
-# 12 "main.c" 2
-
-# 1 "./botoes.h" 1
-
-
-
-void botoes_init (void);
-int s1(void);
-int s0(void);
-# 13 "main.c" 2
-
-# 1 "./botoes7seg.h" 1
-# 14 "main.c" 2
-
-# 1 "./disp7seg.h" 1
-
-
-
-void disp7seg_init (void);
-void display7seg (char c);
-
-struct display7seg_T
+void botoes_initi (void)
 {
-    void (*init) (void);
-    void (*print) (char c);
-} d7seg = { disp7seg_init, display7seg };
-# 15 "main.c" 2
+    TRISDbits.TRISD2 = 1;
+    TRISDbits.TRISD3 = 1;
+    PORTDbits.RD2 = 0;
+    PORTDbits.RD3 = 0;
+}
 
-
-
-
-void main(void)
+char adicionar (void)
 {
-    d7seg.init();
-    signed char cont = 0;
-    int estado = 0;
-    int t;
-    while (1)
-    {
-        switch( estado)
-        {
-            case 0:
+    return(PORTDbits.RD2);
+}
 
-                estado = 1;
-                break;
-
-            case 1:
-                contatores_init ();
-                botoes_init ();
-                estado = 2;
-                break;
-
-            case 2:
-                if (s1 () == 1)
-                estado = 3;
-                break;
-
-            case 3:
-                k1(1);
-                k2(1);
-                t = 3000;
-                estado = 4;
-                break;
-
-            case 4:
-                delay (1);
-                --t;
-                if ( t <= 0)
-                    estado = 5;
-                break;
-
-            case 5:
-                k2(0);
-                k3(1);
-                 ++cont;
-                if(cont >= 15)
-                    cont = 0;
-                estado = 1;
-                break;
-                ;
-            case 6:
-                if (s0 () ==1)
-                    estado = 1;
-
-        }
-
-        d7seg.print(cont);
-    }
+char subtrair (void)
+{
+    return(PORTDbits.RD3);
 }

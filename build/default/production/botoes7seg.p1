@@ -1,41 +1,26 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F1281 `(v ~T0 @X0 0 tf ]
-[v F1283 `(v ~T0 @X0 0 tf1`uc ]
-"8 ./disp7seg.h
-[; ;./disp7seg.h: 8: {
-[s S138 `*F1281 1 `*F1283 1 ]
-[n S138 display7seg_T init print ]
-"4
-[; ;./disp7seg.h: 4: void disp7seg_init (void);
-[v _disp7seg_init `(v ~T0 @X0 0 ef ]
-"5
-[; ;./disp7seg.h: 5: void display7seg (char c);
-[v _display7seg `(v ~T0 @X0 0 ef1`uc ]
-[p mainexit ]
-"4 ./contatores.h
-[; ;./contatores.h: 4: void contatores_init (void);
-[v _contatores_init `(v ~T0 @X0 0 ef ]
-"4 ./botoes.h
-[; ;./botoes.h: 4: void botoes_init (void);
-[v _botoes_init `(v ~T0 @X0 0 ef ]
-"5
-[; ;./botoes.h: 5: int s1(void);
-[v _s1 `(i ~T0 @X0 0 ef ]
-"5 ./contatores.h
-[; ;./contatores.h: 5: void k1 (int liga_desliga);
-[v _k1 `(v ~T0 @X0 0 ef1`i ]
-"6
-[; ;./contatores.h: 6: void k2 (int liga_desliga);
-[v _k2 `(v ~T0 @X0 0 ef1`i ]
-"4 ./delay.h
-[; ;./delay.h: 4: void delay ( int t);
-[v _delay `(v ~T0 @X0 0 ef1`i ]
-"7 ./contatores.h
-[; ;./contatores.h: 7: void k3 (int liga_desliga);
-[v _k3 `(v ~T0 @X0 0 ef1`i ]
-"6 ./botoes.h
-[; ;./botoes.h: 6: int s0(void);
-[v _s0 `(i ~T0 @X0 0 ef ]
+"1608 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1608:     struct {
+[s S59 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S59 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"1607
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1607: typedef union {
+[u S58 `S59 1 ]
+[n S58 . . ]
+"1619
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 1619: extern volatile TRISDbits_t TRISDbits __attribute__((address(0x088)));
+[v _TRISDbits `VS58 ~T0 @X0 0 e@136 ]
+"358
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 358:     struct {
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"357
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 357: typedef union {
+[u S11 `S12 1 ]
+[n S11 . . ]
+"369
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 369: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
+[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -270,209 +255,59 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"5 ./config.h
-[p x FOSC = INTRC_NOCLKOUT ]
-"6
-[p x WDTE = OFF ]
-"7
-[p x PWRTE = OFF ]
-"8
-[p x MCLRE = OFF ]
-"9
-[p x CP = OFF ]
-"10
-[p x CPD = OFF ]
-"11
-[p x BOREN = OFF ]
-"12
-[p x IESO = OFF ]
-"13
-[p x FCMEN = OFF ]
+"13 botoes7seg.c
+[; ;botoes7seg.c: 13: void botoes_initi (void)
+[v _botoes_initi `(v ~T0 @X0 1 ef ]
 "14
-[p x LVP = OFF ]
-"17
-[p x BOR4V = BOR40V ]
-"18
-[p x WRT = OFF ]
-"11 ./disp7seg.h
-[; ;./disp7seg.h: 11: } d7seg = { disp7seg_init, display7seg };
-[v _d7seg `S138 ~T0 @X0 1 e ]
-[i _d7seg
-:U ..
-:U ..
-&U _disp7seg_init
-&U _display7seg
-..
-..
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"19 main.c
-[; ;main.c: 19: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"20
-[; ;main.c: 20: {
+[; ;botoes7seg.c: 14: {
 {
-[e :U _main ]
+[e :U _botoes_initi ]
 [f ]
+"15
+[; ;botoes7seg.c: 15:     TRISDbits.TRISD2 = 1;
+[e = . . _TRISDbits 0 2 -> -> 1 `i `uc ]
+"16
+[; ;botoes7seg.c: 16:     TRISDbits.TRISD3 = 1;
+[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
+"17
+[; ;botoes7seg.c: 17:     PORTDbits.RD2 = 0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"18
+[; ;botoes7seg.c: 18:     PORTDbits.RD3 = 0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"19
+[; ;botoes7seg.c: 19: }
+[e :UE 138 ]
+}
 "21
-[; ;main.c: 21:     d7seg.init();
-[e ( *U . _d7seg 0 ..  ]
+[; ;botoes7seg.c: 21: char adicionar (void)
+[v _adicionar `(uc ~T0 @X0 1 ef ]
 "22
-[; ;main.c: 22:     signed char cont = 0;
-[v _cont `c ~T0 @X0 1 a ]
-[e = _cont -> -> 0 `i `c ]
+[; ;botoes7seg.c: 22: {
+{
+[e :U _adicionar ]
+[f ]
 "23
-[; ;main.c: 23:     int estado = 0;
-[v _estado `i ~T0 @X0 1 a ]
-[e = _estado -> 0 `i ]
+[; ;botoes7seg.c: 23:     return(PORTDbits.RD2);
+[e ) -> . . _PORTDbits 0 2 `uc ]
+[e $UE 139  ]
 "24
-[; ;main.c: 24:     int t;
-[v _t `i ~T0 @X0 1 a ]
-"25
-[; ;main.c: 25:     while (1)
-[e :U 141 ]
-"26
-[; ;main.c: 26:     {
-{
-"27
-[; ;main.c: 27:         switch( estado)
-[e $U 144  ]
-"28
-[; ;main.c: 28:         {
-{
-"29
-[; ;main.c: 29:             case 0:
-[e :U 145 ]
-"31
-[; ;main.c: 31:                 estado = 1;
-[e = _estado -> 1 `i ]
-"32
-[; ;main.c: 32:                 break;
-[e $U 143  ]
-"34
-[; ;main.c: 34:             case 1:
-[e :U 146 ]
-"35
-[; ;main.c: 35:                 contatores_init ();
-[e ( _contatores_init ..  ]
-"36
-[; ;main.c: 36:                 botoes_init ();
-[e ( _botoes_init ..  ]
-"37
-[; ;main.c: 37:                 estado = 2;
-[e = _estado -> 2 `i ]
-"38
-[; ;main.c: 38:                 break;
-[e $U 143  ]
-"40
-[; ;main.c: 40:             case 2:
-[e :U 147 ]
-"41
-[; ;main.c: 41:                 if (s1 () == 1)
-[e $ ! == ( _s1 ..  -> 1 `i 148  ]
-"42
-[; ;main.c: 42:                 estado = 3;
-[e = _estado -> 3 `i ]
-[e :U 148 ]
-"43
-[; ;main.c: 43:                 break;
-[e $U 143  ]
-"45
-[; ;main.c: 45:             case 3:
-[e :U 149 ]
-"46
-[; ;main.c: 46:                 k1(1);
-[e ( _k1 (1 -> 1 `i ]
-"47
-[; ;main.c: 47:                 k2(1);
-[e ( _k2 (1 -> 1 `i ]
-"48
-[; ;main.c: 48:                 t = 3000;
-[e = _t -> 3000 `i ]
-"49
-[; ;main.c: 49:                 estado = 4;
-[e = _estado -> 4 `i ]
-"50
-[; ;main.c: 50:                 break;
-[e $U 143  ]
-"52
-[; ;main.c: 52:             case 4:
-[e :U 150 ]
-"53
-[; ;main.c: 53:                 delay (1);
-[e ( _delay (1 -> 1 `i ]
-"54
-[; ;main.c: 54:                 --t;
-[e =- _t -> 1 `i ]
-"55
-[; ;main.c: 55:                 if ( t <= 0)
-[e $ ! <= _t -> 0 `i 151  ]
-"56
-[; ;main.c: 56:                     estado = 5;
-[e = _estado -> 5 `i ]
-[e :U 151 ]
-"57
-[; ;main.c: 57:                 break;
-[e $U 143  ]
-"59
-[; ;main.c: 59:             case 5:
-[e :U 152 ]
-"60
-[; ;main.c: 60:                 k2(0);
-[e ( _k2 (1 -> 0 `i ]
-"61
-[; ;main.c: 61:                 k3(1);
-[e ( _k3 (1 -> 1 `i ]
-"62
-[; ;main.c: 62:                  ++cont;
-[e =+ _cont -> -> 1 `i `c ]
-"63
-[; ;main.c: 63:                 if(cont >= 15)
-[e $ ! >= -> _cont `i -> 15 `i 153  ]
-"64
-[; ;main.c: 64:                     cont = 0;
-[e = _cont -> -> 0 `i `c ]
-[e :U 153 ]
-"65
-[; ;main.c: 65:                 estado = 1;
-[e = _estado -> 1 `i ]
-"66
-[; ;main.c: 66:                 break;
-[e $U 143  ]
-"68
-[; ;main.c: 68:             case 6:
-[e :U 154 ]
-"69
-[; ;main.c: 69:                 if (s0 () ==1)
-[e $ ! == ( _s0 ..  -> 1 `i 155  ]
-"70
-[; ;main.c: 70:                     estado = 1;
-[e = _estado -> 1 `i ]
-[e :U 155 ]
-"72
-[; ;main.c: 72:         }
-}
-[e $U 143  ]
-[e :U 144 ]
-[e [\ _estado , $ -> 0 `i 145
- , $ -> 1 `i 146
- , $ -> 2 `i 147
- , $ -> 3 `i 149
- , $ -> 4 `i 150
- , $ -> 5 `i 152
- , $ -> 6 `i 154
- 143 ]
-[e :U 143 ]
-"74
-[; ;main.c: 74:         d7seg.print(cont);
-[e ( *U . _d7seg 1 (1 -> _cont `uc ]
-"75
-[; ;main.c: 75:     }
-}
-[e :U 140 ]
-[e $U 141  ]
-[e :U 142 ]
-"76
-[; ;main.c: 76: }
+[; ;botoes7seg.c: 24: }
 [e :UE 139 ]
+}
+"26
+[; ;botoes7seg.c: 26: char subtrair (void)
+[v _subtrair `(uc ~T0 @X0 1 ef ]
+"27
+[; ;botoes7seg.c: 27: {
+{
+[e :U _subtrair ]
+[f ]
+"28
+[; ;botoes7seg.c: 28:     return(PORTDbits.RD3);
+[e ) -> . . _PORTDbits 0 3 `uc ]
+[e $UE 140  ]
+"29
+[; ;botoes7seg.c: 29: }
+[e :UE 140 ]
 }

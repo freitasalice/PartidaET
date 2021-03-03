@@ -11,14 +11,15 @@
 #include "delay.h"
 #include "contatores.h"
 #include "botoes.h"
+#include "botoes7seg.h"
+#include "disp7seg.h"
 
-#define ENTRADA     1
-#define SAIDA       0
-#define ABERTO      0
-#define FECHADO     1
+
 
 void main(void) 
 { 
+    d7seg.init();
+    signed char cont = 0;
     int estado = 0;
     int t;  
     while (1)
@@ -57,11 +58,19 @@ void main(void)
             
             case 5: 
                 k2(0);
-                k3(1);
-                if ( s0() == 1)
+                k3(1);               
+                 ++cont;
+                if(cont >= 15)
+                    cont = 0;               
                 estado = 1;
                 break;
+                ;
+            case 6:
+                if (s0 () ==1)
+                    estado = 1;
+                        
         }       
         
+        d7seg.print(cont);
     }
 }
