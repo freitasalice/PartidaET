@@ -19,7 +19,7 @@
 void main(void) 
 { 
     d7seg.init();
-    signed char cont = 0;
+    char cont = 0;
     int estado = 0;
     int t;  
     while (1)
@@ -62,9 +62,9 @@ void main(void)
                  ++cont;
                 if(cont >= 15)
                     cont = 0;               
-                estado = 1;
+                estado = 6;
                 break;
-                ;
+                
             case 6:
                 if (s0 () ==1)
                     estado = 1;
