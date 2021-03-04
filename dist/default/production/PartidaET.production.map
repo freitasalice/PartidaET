@@ -3,23 +3,23 @@ Microchip MPLAB XC8 Compiler V2.00 ()
 Linker command line:
 
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
-  -cs -h+dist/default/production\partidaEstrelaTriangulo.X.production.sym \
-  --cmf=dist/default/production\partidaEstrelaTriangulo.X.production.cmf -z \
-  -Q16F887 -oC:\Users\21192692\AppData\Local\Temp\saq8.2 \
-  -Mdist/default/production/partidaEstrelaTriangulo.X.production.map -E1 \
-  -ver=XC8 --acfsm=1493 -ASTACK=0110h-016fh -pstack=STACK \
-  -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
-  -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
-  -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh \
-  -ABANK3=0190h-01EFh -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -cs -h+dist/default/production\PartidaET.production.sym \
+  --cmf=dist/default/production\PartidaET.production.cmf -z -Q16F887 \
+  -oC:\Users\21192692\AppData\Local\Temp\s45c.2 \
+  -Mdist/default/production/PartidaET.production.map -E1 -ver=XC8 \
+  --acfsm=1493 -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 \
+  -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
+  -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
+  -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
   -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
   -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\21192692\AppData\Local\Temp\saq8.o \
-  dist/default/production\partidaEstrelaTriangulo.X.production.o 
+  -DENTRY=2 -k C:\Users\21192692\AppData\Local\Temp\s45c.o \
+  dist/default/production\PartidaET.production.o 
 
 Object code version is 3.11
 
@@ -28,29 +28,29 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\21192692\AppData\Local\Temp\saq8.o
+C:\Users\21192692\AppData\Local\Temp\s45c.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2     400E       0
-dist/default/production\partidaEstrelaTriangulo.X.production.o
+dist/default/production\PartidaET.production.o
                 cinit                               7E2      7E2       1E      FC4       0
                 functab                               3        3        C        6       0
-                text10                              69D      69D        9      D3A       0
-                text9                               6B9      6B9        B      D72       0
-                text8                               6FF      6FF       17      DFE       0
-                text7                               6AF      6AF        A      D5E       0
-                text6                               6A6      6A6        9      D4C       0
-                text5                               685      685        8      D0A       0
-                text4                               68D      68D        8      D1A       0
-                text3                               695      695        8      D2A       0
-                text2                               6C4      6C4        C      D88       0
-                text1                               6D0      6D0        C      DA0       0
-                maintext                            716      716       CC      E2C       0
+                text10                              68E      68E        9      D1C       0
+                text9                               6AA      6AA        B      D54       0
+                text8                               6F0      6F0       17      DE0       0
+                text7                               6A0      6A0        A      D40       0
+                text6                               697      697        9      D2E       0
+                text5                               676      676        8      CEC       0
+                text4                               67E      67E        8      CFC       0
+                text3                               686      686        8      D0C       0
+                text2                               6B5      6B5        C      D6A       0
+                text1                               6C1      6C1        C      D82       0
+                maintext                            707      707       DB      E0E       0
                 cstackCOMMON                         70       70        A       70       1
-                inittext                            6EC      6EC       13      DD8       0
+                inittext                            6DD      6DD       13      DBA       0
                 dataBANK0                            20       20       10       20       1
                 dataCOMMON                           7A       7A        2       70       1
-                idataBANK0                          6DC      6DC       10      DB8       0
-                idataCOMMON                         683      683        2      D06       0
+                idataBANK0                          6CD      6CD       10      D9A       0
+                idataCOMMON                         674      674        2      CE8       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -58,20 +58,20 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   CODE           
                 end_init                              0        0        3         0
                 cinit                               7E2      7E2       1E         0
-                text10                              69D      69D        9         0
-                text9                               6B9      6B9        B         0
-                text8                               6FF      6FF       17         0
-                text7                               6AF      6AF        A         0
-                text6                               6A6      6A6        9         0
-                text5                               685      685        8         0
-                text4                               68D      68D        8         0
-                text3                               695      695        8         0
-                text2                               6C4      6C4        C         0
-                text1                               6D0      6D0        C         0
-                maintext                            716      716       CC         0
-                inittext                            6EC      6EC       13         0
-                idataBANK0                          6DC      6DC       10         0
-                idataCOMMON                         683      683        2         0
+                text10                              68E      68E        9         0
+                text9                               6AA      6AA        B         0
+                text8                               6F0      6F0       17         0
+                text7                               6A0      6A0        A         0
+                text6                               697      697        9         0
+                text5                               676      676        8         0
+                text4                               67E      67E        8         0
+                text3                               686      686        8         0
+                text2                               6B5      6B5        C         0
+                text1                               6C1      6C1        C         0
+                maintext                            707      707       DB         0
+                inittext                            6DD      6DD       13         0
+                idataBANK0                          6CD      6CD       10         0
+                idataCOMMON                         674      674        2         0
 
         CLASS   STRCODE        
 
@@ -123,20 +123,20 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 functab                        000003  00000C  00000F         6       0  ENTRY       2
                 dataBANK0                      000020  000010  000030        20       1  BANK0       1
                 cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
-                idataCOMMON                    000683  000002  000685       D06       0  CODE        2
-                text5                          000685  000008  00068D       D0A       0  CODE        2
-                text4                          00068D  000008  000695       D1A       0  CODE        2
-                text3                          000695  000008  00069D       D2A       0  CODE        2
-                text10                         00069D  000009  0006A6       D3A       0  CODE        2
-                text6                          0006A6  000009  0006AF       D4C       0  CODE        2
-                text7                          0006AF  00000A  0006B9       D5E       0  CODE        2
-                text9                          0006B9  00000B  0006C4       D72       0  CODE        2
-                text2                          0006C4  00000C  0006D0       D88       0  CODE        2
-                text1                          0006D0  00000C  0006DC       DA0       0  CODE        2
-                idataBANK0                     0006DC  000010  0006EC       DB8       0  CODE        2
-                inittext                       0006EC  000013  0006FF       DD8       0  CODE        2
-                text8                          0006FF  000017  000716       DFE       0  CODE        2
-                maintext                       000716  0000CC  0007E2       E2C       0  CODE        2
+                idataCOMMON                    000674  000002  000676       CE8       0  CODE        2
+                text5                          000676  000008  00067E       CEC       0  CODE        2
+                text4                          00067E  000008  000686       CFC       0  CODE        2
+                text3                          000686  000008  00068E       D0C       0  CODE        2
+                text10                         00068E  000009  000697       D1C       0  CODE        2
+                text6                          000697  000009  0006A0       D2E       0  CODE        2
+                text7                          0006A0  00000A  0006AA       D40       0  CODE        2
+                text9                          0006AA  00000B  0006B5       D54       0  CODE        2
+                text2                          0006B5  00000C  0006C1       D6A       0  CODE        2
+                text1                          0006C1  00000C  0006CD       D82       0  CODE        2
+                idataBANK0                     0006CD  000010  0006DD       D9A       0  CODE        2
+                inittext                       0006DD  000013  0006F0       DBA       0  CODE        2
+                text8                          0006F0  000017  000707       DE0       0  CODE        2
+                maintext                       000707  0000DB  0007E2       E0E       0  CODE        2
                 cinit                          0007E2  00001E  000800       FC4       0  CODE        2
                 config                         002007  000002  002009      400E       0  CONFIG      2
 
@@ -148,13 +148,13 @@ UNUSED ADDRESS RANGES
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
-        CODE             000F-0682            674           2
+        CODE             000F-0673            665           2
                          0800-1FFF            800
         COMMON           007C-007D              2           1
-        CONST            000F-0682            100           2
+        CONST            000F-0673            100           2
                          0800-1FFF            100
         EEDATA           2100-21FF            100           2
-        ENTRY            000F-0682            100           2
+        ENTRY            000F-0673            100           2
                          0800-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0030-006F             40           1
@@ -166,9 +166,9 @@ UNUSED ADDRESS RANGES
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
-        STRCODE          000F-0682            674           2
+        STRCODE          000F-0673            665           2
                          0800-1FFF           1800
-        STRING           000F-0682            100           2
+        STRING           000F-0673            100           2
                          0800-1FFF            100
 
                                   Symbol Table
@@ -275,36 +275,36 @@ ___latbits                (abs)        0002
 ___sp                     stack        0000
 __end_of__fptable         functab      000F
 __end_of__initialization  cinit        07FC
-__end_of_botoes_init      text10       06A6
-__end_of_contatores_init  text9        06C4
-__end_of_delay            text8        0716
-__end_of_disp7seg_init    text7        06B9
-__end_of_display7seg      text6        06AF
-__end_of_k1               text5        068D
-__end_of_k2               text4        0695
-__end_of_k3               text3        069D
+__end_of_botoes_init      text10       0697
+__end_of_contatores_init  text9        06B5
+__end_of_delay            text8        0707
+__end_of_disp7seg_init    text7        06AA
+__end_of_display7seg      text6        06A0
+__end_of_k1               text5        067E
+__end_of_k2               text4        0686
+__end_of_k3               text3        068E
 __end_of_main             maintext     07E2
-__end_of_s0               text2        06D0
-__end_of_s1               text1        06DC
+__end_of_s0               text2        06C1
+__end_of_s1               text1        06CD
 __fptable                 functab      0003
 __initialization          cinit        07E2
 __pcstackCOMMON           cstackCOMMON 0070
 __pdataBANK0              dataBANK0    0020
 __pdataCOMMON             dataCOMMON   007A
 __pfunctab                functab      0003
-__pidataBANK0             idataBANK0   06DC
-__pidataCOMMON            idataCOMMON  0683
-__pmaintext               maintext     0716
-__ptext1                  text1        06D0
-__ptext10                 text10       069D
-__ptext2                  text2        06C4
-__ptext3                  text3        0695
-__ptext4                  text4        068D
-__ptext5                  text5        0685
-__ptext6                  text6        06A6
-__ptext7                  text7        06AF
-__ptext8                  text8        06FF
-__ptext9                  text9        06B9
+__pidataBANK0             idataBANK0   06CD
+__pidataCOMMON            idataCOMMON  0674
+__pmaintext               maintext     0707
+__ptext1                  text1        06C1
+__ptext10                 text10       068E
+__ptext2                  text2        06B5
+__ptext3                  text3        0686
+__ptext4                  text4        067E
+__ptext5                  text5        0676
+__ptext6                  text6        0697
+__ptext7                  text7        06A0
+__ptext8                  text8        06F0
+__ptext9                  text9        06AA
 __size_of__fptable        (abs)        0000
 __size_of_botoes_init     (abs)        0000
 __size_of_contatores_init (abs)        0000
@@ -317,18 +317,18 @@ __size_of_k3              (abs)        0000
 __size_of_main            (abs)        0000
 __size_of_s0              (abs)        0000
 __size_of_s1              (abs)        0000
-_botoes_init              text10       069D
-_contatores_init          text9        06B9
+_botoes_init              text10       068E
+_contatores_init          text9        06AA
 _d7seg                    dataCOMMON   007A
-_delay                    text8        06FF
-_disp7seg_init            text7        06AF
-_display7seg              text6        06A6
-_k1                       text5        0685
-_k2                       text4        068D
-_k3                       text3        0695
-_main                     maintext     0716
-_s0                       text2        06C4
-_s1                       text1        06D0
+_delay                    text8        06F0
+_disp7seg_init            text7        06A0
+_display7seg              text6        0697
+_k1                       text5        0676
+_k2                       text4        067E
+_k3                       text3        0686
+_main                     maintext     0707
+_s0                       text2        06B5
+_s1                       text1        06C1
 _vetor                    dataBANK0    0020
 btemp                     (abs)        007E
 delay@t                   cstackCOMMON 0070
@@ -337,8 +337,8 @@ end_of_initialization     cinit        07FC
 fpbase                    functab      0008
 fptable                   functab      0003
 fptotal                   (abs)        0004
-init_fetch0               inittext     06EC
-init_ram0                 inittext     06F0
+init_fetch0               inittext     06DD
+init_ram0                 inittext     06E1
 intlevel0                 functab      0003
 intlevel1                 functab      0003
 intlevel2                 functab      0003
@@ -348,8 +348,8 @@ intlevel5                 functab      0003
 k1@liga_desliga           cstackCOMMON 0070
 k2@liga_desliga           cstackCOMMON 0070
 k3@liga_desliga           cstackCOMMON 0070
-main@cont                 cstackCOMMON 0079
-main@estado               cstackCOMMON 0077
+main@cont                 cstackCOMMON 0077
+main@estado               cstackCOMMON 0078
 main@t                    cstackCOMMON 0075
 reset_vec                 reset_vec    0000
 stackhi                   (abs)        0000
@@ -367,9 +367,9 @@ FUNCTION INFORMATION:
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  estado          2    7[COMMON] int 
+  estado          2    8[COMMON] int 
   t               2    5[COMMON] int 
-  cont            1    9[COMMON] char 
+  cont            1    7[COMMON] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -696,22 +696,22 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 delay.c
-		_delay         		CODE           	06FF	0000	24
+		_delay         		CODE           	06F0	0000	24
 
 delay.c estimated size: 24
 
 botoes.c
-		_s0            		CODE           	06C4	0000	13
-		_s1            		CODE           	06D0	0000	13
-		_botoes_init   		CODE           	069D	0000	10
+		_s0            		CODE           	06B5	0000	13
+		_s1            		CODE           	06C1	0000	13
+		_botoes_init   		CODE           	068E	0000	10
 
 botoes.c estimated size: 36
 
 contatores.c
-		_k1            		CODE           	0685	0000	9
-		_k2            		CODE           	068D	0000	9
-		_k3            		CODE           	0695	0000	9
-		_contatores_init		CODE           	06B9	0000	12
+		_k1            		CODE           	0676	0000	9
+		_k2            		CODE           	067E	0000	9
+		_k3            		CODE           	0686	0000	9
+		_contatores_init		CODE           	06AA	0000	12
 
 contatores.c estimated size: 39
 
@@ -722,13 +722,13 @@ shared
 shared estimated size: 40
 
 disp7seg.c
-		_display7seg   		CODE           	06A6	0000	10
-		_disp7seg_init 		CODE           	06AF	0000	11
+		_display7seg   		CODE           	0697	0000	10
+		_disp7seg_init 		CODE           	06A0	0000	11
 
 disp7seg.c estimated size: 21
 
 main.c
-		_main          		CODE           	0716	0000	205
+		_main          		CODE           	0707	0000	220
 
-main.c estimated size: 205
+main.c estimated size: 220
 

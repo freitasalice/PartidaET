@@ -33,3 +33,10 @@ void k3 (int liga_desliga)
 {
     PORTDbits.RD5 = liga_desliga;
 }
+
+void k1k2k3 (int liga_desliga)
+{
+    PORTDbits.RD7 = liga_desliga;
+    PORTDbits.RD6 = liga_desliga;
+    PORTDbits.RD5 = liga_desliga;
+}

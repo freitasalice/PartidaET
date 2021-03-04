@@ -1,9 +1,9 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F1281 `(v ~T0 @X0 0 tf ]
-[v F1283 `(v ~T0 @X0 0 tf1`uc ]
+[v F1283 `(v ~T0 @X0 0 tf ]
+[v F1285 `(v ~T0 @X0 0 tf1`uc ]
 "8 ./disp7seg.h
 [; ;./disp7seg.h: 8: {
-[s S138 `*F1281 1 `*F1283 1 ]
+[s S138 `*F1283 1 `*F1285 1 ]
 [n S138 display7seg_T init print ]
 "4
 [; ;./disp7seg.h: 4: void disp7seg_init (void);
@@ -30,12 +30,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4 ./delay.h
 [; ;./delay.h: 4: void delay ( int t);
 [v _delay `(v ~T0 @X0 0 ef1`i ]
-"7 ./contatores.h
-[; ;./contatores.h: 7: void k3 (int liga_desliga);
-[v _k3 `(v ~T0 @X0 0 ef1`i ]
 "6 ./botoes.h
 [; ;./botoes.h: 6: int s0(void);
 [v _s0 `(i ~T0 @X0 0 ef ]
+"7 ./contatores.h
+[; ;./contatores.h: 7: void k3 (int liga_desliga);
+[v _k3 `(v ~T0 @X0 0 ef1`i ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -318,9 +318,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 21:     d7seg.init();
 [e ( *U . _d7seg 0 ..  ]
 "22
-[; ;main.c: 22:     signed char cont = 0;
-[v _cont `c ~T0 @X0 1 a ]
-[e = _cont -> -> 0 `i `c ]
+[; ;main.c: 22:     char cont = 0;
+[v _cont `uc ~T0 @X0 1 a ]
+[e = _cont -> -> 0 `i `uc ]
 "23
 [; ;main.c: 23:     int estado = 0;
 [v _estado `i ~T0 @X0 1 a ]
@@ -412,45 +412,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _estado -> 5 `i ]
 [e :U 151 ]
 "57
-[; ;main.c: 57:                 break;
-[e $U 143  ]
-"59
-[; ;main.c: 59:             case 5:
+[; ;main.c: 57:                 if (s0() == 1)
+[e $ ! == ( _s0 ..  -> 1 `i 152  ]
+"58
+[; ;main.c: 58:                     estado = 1;
+[e = _estado -> 1 `i ]
 [e :U 152 ]
-"60
-[; ;main.c: 60:                 k2(0);
-[e ( _k2 (1 -> 0 `i ]
-"61
-[; ;main.c: 61:                 k3(1);
-[e ( _k3 (1 -> 1 `i ]
-"62
-[; ;main.c: 62:                  ++cont;
-[e =+ _cont -> -> 1 `i `c ]
-"63
-[; ;main.c: 63:                 if(cont >= 15)
-[e $ ! >= -> _cont `i -> 15 `i 153  ]
-"64
-[; ;main.c: 64:                     cont = 0;
-[e = _cont -> -> 0 `i `c ]
-[e :U 153 ]
-"65
-[; ;main.c: 65:                 estado = 1;
-[e = _estado -> 1 `i ]
-"66
-[; ;main.c: 66:                 break;
+"59
+[; ;main.c: 59:                 break;
 [e $U 143  ]
-"68
-[; ;main.c: 68:             case 6:
+"61
+[; ;main.c: 61:             case 5:
+[e :U 153 ]
+"62
+[; ;main.c: 62:                 k2(0);
+[e ( _k2 (1 -> 0 `i ]
+"63
+[; ;main.c: 63:                 k3(1);
+[e ( _k3 (1 -> 1 `i ]
+"64
+[; ;main.c: 64:                  ++cont;
+[e =+ _cont -> -> 1 `i `uc ]
+"65
+[; ;main.c: 65:                 if(cont >= 15)
+[e $ ! >= -> _cont `i -> 15 `i 154  ]
+"66
+[; ;main.c: 66:                     cont = 0;
+[e = _cont -> -> 0 `i `uc ]
 [e :U 154 ]
-"69
-[; ;main.c: 69:                 if (s0 () ==1)
-[e $ ! == ( _s0 ..  -> 1 `i 155  ]
+"67
+[; ;main.c: 67:                 estado = 6;
+[e = _estado -> 6 `i ]
+"68
+[; ;main.c: 68:                 break;
+[e $U 143  ]
 "70
-[; ;main.c: 70:                     estado = 1;
-[e = _estado -> 1 `i ]
+[; ;main.c: 70:             case 6:
 [e :U 155 ]
+"71
+[; ;main.c: 71:                 if (s0 () ==1)
+[e $ ! == ( _s0 ..  -> 1 `i 156  ]
 "72
-[; ;main.c: 72:         }
+[; ;main.c: 72:                     estado = 1;
+[e = _estado -> 1 `i ]
+[e :U 156 ]
+"75
+[; ;main.c: 75:         }
 }
 [e $U 143  ]
 [e :U 144 ]
@@ -459,20 +466,20 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 147
  , $ -> 3 `i 149
  , $ -> 4 `i 150
- , $ -> 5 `i 152
- , $ -> 6 `i 154
+ , $ -> 5 `i 153
+ , $ -> 6 `i 155
  143 ]
 [e :U 143 ]
-"74
-[; ;main.c: 74:         d7seg.print(cont);
-[e ( *U . _d7seg 1 (1 -> _cont `uc ]
-"75
-[; ;main.c: 75:     }
+"77
+[; ;main.c: 77:         d7seg.print(cont);
+[e ( *U . _d7seg 1 (1 _cont ]
+"78
+[; ;main.c: 78:     }
 }
 [e :U 140 ]
 [e $U 141  ]
 [e :U 142 ]
-"76
-[; ;main.c: 76: }
+"79
+[; ;main.c: 79: }
 [e :UE 139 ]
 }

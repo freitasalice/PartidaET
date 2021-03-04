@@ -44,7 +44,7 @@ void main(void)
              
             case 3:    
                 k1(1);
-                k2(1);
+                k2(1);                                                 
                 t = 3000;
                 estado = 4;
                 break;
@@ -52,8 +52,10 @@ void main(void)
             case 4:
                 delay (1);
                 --t;        
-                if ( t <= 0)
+                if ( t <= 0)    
                     estado = 5;
+                if (s0() == 1)
+                    estado = 1;
                 break;
             
             case 5: 
@@ -68,6 +70,7 @@ void main(void)
             case 6:
                 if (s0 () ==1)
                     estado = 1;
+                
                         
         }       
         

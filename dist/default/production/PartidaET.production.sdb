@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 6 ]
-"13 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\botoes.c
+"13 C:\Users\21192692\MPLABXProjects\PartidaET\botoes.c
 [v _botoes_init botoes_init `(v  1 e 1 0 ]
 "21
 [v _s1 s1 `(i  1 e 2 0 ]
@@ -17,7 +17,7 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"11 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\contatores.c
+"11 C:\Users\21192692\MPLABXProjects\PartidaET\contatores.c
 [v _contatores_init contatores_init `(v  1 e 1 0 ]
 "21
 [v _k1 k1 `(v  1 e 1 0 ]
@@ -25,16 +25,16 @@
 [v _k2 k2 `(v  1 e 1 0 ]
 "32
 [v _k3 k3 `(v  1 e 1 0 ]
-"13 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\delay.c
+"13 C:\Users\21192692\MPLABXProjects\PartidaET\delay.c
 [v _delay delay `(v  1 e 1 0 ]
-"15 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\disp7seg.c
+"15 C:\Users\21192692\MPLABXProjects\PartidaET\disp7seg.c
 [v _disp7seg_init disp7seg_init `(v  1 e 1 0 ]
 "22
 [v _display7seg display7seg `(v  1 e 1 0 ]
-"19 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\main.c
+"19 C:\Users\21192692\MPLABXProjects\PartidaET\main.c
 [v _main main `(v  1 e 1 0 ]
 [s S24 display7seg_T 2 `*.27(v 1 init 1 0 `*.27(v 1 print 1 1 ]
-"11 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X/disp7seg.h
+"11 C:\Users\21192692\MPLABXProjects\PartidaET/disp7seg.h
 [v _d7seg d7seg `S24  1 e 2 0 ]
 "228 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -66,20 +66,20 @@
 [v _TRISDbits TRISDbits `VES97  1 e 1 @136 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"12 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\disp7seg.c
+"12 C:\Users\21192692\MPLABXProjects\PartidaET\disp7seg.c
 [v _vetor vetor `[16]uc  1 e 16 0 ]
-"19 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\main.c
+"19 C:\Users\21192692\MPLABXProjects\PartidaET\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "23
-[v main@estado estado `i  1 a 2 7 ]
+[v main@estado estado `i  1 a 2 8 ]
 "24
 [v main@t t `i  1 a 2 5 ]
 "22
-[v main@cont cont `c  1 a 1 9 ]
-"76
+[v main@cont cont `uc  1 a 1 7 ]
+"79
 } 0
-"21 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\botoes.c
+"21 C:\Users\21192692\MPLABXProjects\PartidaET\botoes.c
 [v _s1 s1 `(i  1 e 2 0 ]
 {
 "24
@@ -89,7 +89,7 @@
 {
 "29
 } 0
-"32 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\contatores.c
+"32 C:\Users\21192692\MPLABXProjects\PartidaET\contatores.c
 [v _k3 k3 `(v  1 e 1 0 ]
 {
 [v k3@liga_desliga liga_desliga `i  1 p 2 0 ]
@@ -107,7 +107,7 @@
 [v k1@liga_desliga liga_desliga `i  1 p 2 0 ]
 "25
 } 0
-"22 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\disp7seg.c
+"22 C:\Users\21192692\MPLABXProjects\PartidaET\disp7seg.c
 [v _display7seg display7seg `(v  1 e 1 0 ]
 {
 [v display7seg@c c `uc  1 p 1 0 ]
@@ -118,18 +118,18 @@
 {
 "20
 } 0
-"13 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\delay.c
+"13 C:\Users\21192692\MPLABXProjects\PartidaET\delay.c
 [v _delay delay `(v  1 e 1 0 ]
 {
 [v delay@t t `i  1 p 2 0 ]
 "20
 } 0
-"11 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\contatores.c
+"11 C:\Users\21192692\MPLABXProjects\PartidaET\contatores.c
 [v _contatores_init contatores_init `(v  1 e 1 0 ]
 {
 "19
 } 0
-"13 C:\Users\21192692\MPLABXProjects\partidaEstrelaTriangulo.X\botoes.c
+"13 C:\Users\21192692\MPLABXProjects\PartidaET\botoes.c
 [v _botoes_init botoes_init `(v  1 e 1 0 ]
 {
 "19
